@@ -9,18 +9,12 @@ function weight() {
   berat = document.getElementById("Berat").value;
   bmi = tinggi - berat;
   //   alert(cardio)
-
+  localStorage.setItem("bmi", bmi);
   localStorage.setItem("Nama", nama);
   localStorage.setItem("Tinggi", tinggi);
   localStorage.setItem("Berat", berat);
 
-  if (bmi >= 110) {
-    bmi = "Underweight";
-  } else if (bmi <= 90) {
-    bmi = "Overweight";
-  } else {
-    bmi = "Proportional";
-  }
+ 
   if (!nama || !tinggi ||!berat){
     alert('Please complete the form first')
   }
@@ -28,7 +22,7 @@ function weight() {
     localStorage.setItem("Nama", nama);
     localStorage.setItem("Tinggi", tinggi);
     localStorage.setItem("Berat", berat);
-  
+    localStorage.setItem("bmi", bmi);
     if (bmi >= 110) {
       bmi = "Underweight";
     } else if (bmi <= 90) {
@@ -47,18 +41,11 @@ function cardio() {
   tinggi = document.getElementById("Tinggi").value;
   berat = document.getElementById("Berat").value;
   bmi = tinggi - berat;
-
+  localStorage.setItem("bmi", bmi);
   localStorage.setItem("Nama", nama);
   localStorage.setItem("Tinggi", tinggi);
   localStorage.setItem("Berat", berat);
 
-  if (bmi >= 110) {
-    bmi = "Underweight";
-  } else if (bmi <= 90) {
-    bmi = "Overweight";
-  } else {
-    bmi = "Proportional";
-  }
 
   if (!nama || !tinggi ||!berat){
     alert('Please complete the form first')
@@ -67,7 +54,7 @@ function cardio() {
     localStorage.setItem("Nama", nama);
     localStorage.setItem("Tinggi", tinggi);
     localStorage.setItem("Berat", berat);
-  
+    localStorage.setItem("bmi", bmi);
     if (bmi >= 110) {
       bmi = "Underweight";
     } else if (bmi <= 90) {
